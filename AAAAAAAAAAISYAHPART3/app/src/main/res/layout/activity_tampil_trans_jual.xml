@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityTampilTransJual"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kode Transaksi :"
+            android:layout_weight="2"/>
+        <TextView
+            android:id="@+id/kdtrans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tgl. Trans :"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/date_selected"
+            android:inputType="date"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <ListView
+        android:layout_weight="1"
+        android:id="@+id/lvtampilbaranag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total: Rp."
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Diskon %"
+                android:layout_weight="1"
+                android:textAlignment="textEnd"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lbayar"
+            android:layout_below="@+id/btntambah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="TOTAL"
+                android:editable="false"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/diskon"
+                android:layout_weight="2"
+                android:text="0"/>
+            <Button
+                android:id="@+id/btndiskon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@+id/lbayar"
+            android:id="@+id/lbayar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Grand Total: Rp."
+            android:layout_weight="1"/>
+        <EditText
+            android:hint="GRANDTOTAL"
+            android:id="@+id/gtotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bayar: Rp."
+            android:layout_weight="1"
+            />
+        <LinearLayout
+            android:id="@+id/lbayar"
+            android:layout_below="@+id/btntambah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pembayar"
+                android:hint="BAYAR"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btnbayar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hitung"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kembalian: Rp."
+            android:layout_weight="1"/>
+        <EditText
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/kembali"
+            android:layout_weight="1"
+            android:hint="KEMBALIAN"/>
+        <LinearLayout
+            android:layout_below="@+id/lbayar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <Button
+                android:layout_width="10px"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:text="Selesai"
+                android:id="@+id/btnSimpan"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textColor="@android:color/white"
+                android:background="@android:color/holo_green_light"/>
+            <Button
+                android:layout_marginLeft="10dp"
+                android:layout_width="10px"
+                android:layout_height="wrap_content"
+                android:text="Batal"
+                android:id="@+id/btnBatal"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textColor="@android:color/white"
+                android:background="@android:color/holo_red_light"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityTampilBarang"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="vertical"
+    android:background="@drawable/bg1">
+
+    <ListView
+        android:layout_weight="1"
+        android:id="@+id/lvtampilbaranag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
+    <Button
+        android:layout_below="@+id/lvtampilbaranag"
+        android:id="@+id/btntambahdata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Maintance Data"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"/>
+    <Button
+        android:layout_below="@+id/btntambahdata"
+        android:id="@+id/btnrefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Refresh Data"
+        android:background="@android:color/holo_green_dark"
+        android:textColor="@android:color/white"/>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NewTown_App</string>
+    <string-array name="akses">
+        <item>Admin</item>
+        <item>Kasir</item>
+        <item>Gudang</item>
+    </string-array>
+    <string name="date_label">Tekan tombol untuk mengatur tanggal</string>
+    <string name="date_button">Atur Tanggal</string>
+    <string name="date_view">Tanggal : </string>
+    <string name="date_selected"></string>
+</resources>
